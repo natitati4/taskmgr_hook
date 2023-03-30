@@ -56,7 +56,7 @@ int main()
 	}
 
 	char* dll_name_string =
-		"D:\\sahar_stuff\\sahar_ex15\\ex16_3_taskmgr_hook\\iat_hook_ntquertsysteminformation_dll\\Debug\\iat_hook_ntquertsysteminformation_dll.dll";
+		"PATH"; // change this to the path of the DLL
 	size_t sz = strlen(dll_name_string) + 1;
 
 	BOOL writeProcMemResult = WriteProcessMemory(hVictimProcess, lpDataBaseAddressOfVictim, (LPCVOID)dll_name_string, sz, NULL);
