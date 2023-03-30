@@ -91,7 +91,8 @@ LPVOID hook_ntquerysysinfo()
 			while (originalFirstThunk->u1.AddressOfData != NULL) // run until function name is not null, meaning we have functions
 			{
 
-
+				
+				// to skip functions that are saved by ordinals rather than by names
 				if ((DWORD_PTR)imageBase + originalFirstThunk->u1.AddressOfData & 0x80000000)
 				{
 					originalFirstThunk++;
